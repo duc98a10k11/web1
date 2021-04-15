@@ -1,0 +1,160 @@
+/* phân trang tiêu đề */
+.page-header {
+  font-size: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* .page-header .page-title {
+
+} */
+
+.page-header .btnAddCustomer {
+  position: absolute;
+  right: 24px;
+  background-image: url("../../content/icon/add.png");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 10px;
+  /* margin-left: 6px; */
+  padding-left: 40px;
+  background-size: 24px 24px;
+}
+/* Toolbar */
+.page-toolbar {
+  margin-top: 4px;
+  height: 44px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-item {
+  display: flex;
+  justify-content: space-between;
+}
+.btnDelete {
+  margin-right: 10px;
+  background-color: red !important;
+}
+
+.btnVisible {
+  display: none !important;
+}
+
+.btnDelete:hover {
+  background-color: #f65454 !important;
+}
+
+.page-toolbar #btRefresh {
+  width: 40px;
+  height: 40px;
+  /* position: absolute; */
+  right: 24px;
+  background-image: url("../../content/icon/refresh.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.page-toolbar #btRefresh:hover {
+  background-color: #dadce0;
+}
+/* bảng dữ liệu */
+.grid {
+  margin-top: 5px;
+}
+
+/* phân trang */
+.table-paging {
+  height: 47px;
+  left: 24px;
+  right: 24px;
+  padding: 6px 6px 0px 6px;
+  position: absolute;
+  bottom: 0;
+  border-top: 3px solid rgb(80, 79, 79);
+}
+
+.table-paging .table-paging-item {
+  display: flex;
+}
+
+.table-paging .table-paging-item .left {
+  flex: 1;
+}
+
+.table-paging .table-paging-item .right {
+  position: absolute;
+  right: 0px;
+  flex: 1;
+}
+
+.table-paging .table-paging-item .center {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.table-paging .table-paging-item .center .btn-item {
+  border-radius: 50%;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+
+.table-paging .table-paging-item .center .btn-item:hover {
+  background-color: #2fbe8e;
+}
+
+.table-paging .table-paging-item .center .btn-pre-page {
+  background-image: url("../../content/icon/btn-prev-page.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.table-paging-item .center .btn-firstpage {
+  background-image: url("../../content/icon/btn-firstpage.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.table-paging-item .btn-next-page {
+  background-image: url("../../content/icon/btn-next-page.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.table-paging-item .btn-lastpage {
+  background-image: url("../../content/icon/btn-lastpage.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* 
+popup delete
+ */
+.popup {
+  background-color: #bbbbbb;
+  width: 300px;
+  height: 120px;
+  border-radius: 5px;
+  position: absolute;
+  font-size: 20px;
+  top: 5%;
+  display: none;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  text-align: center;
+}
+
+.popup .popup-item {
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,0 +1,44 @@
+table{
+    width: 100%;
+   
+    border-collapse: collapse;
+}
+
+table tr,th,td {
+    height: 40px;
+    border-bottom: 1px solid #bbbbbb;
+    text-align: left;
+    padding-left: 16px;
+}
+
+ tr:hover {
+    background-color: #E9EBEE;
+}
+
+/* tbody tr:focus{
+    background-color: #bbbbbb;
+} */
+tbody .trHover {
+    background-color: #bbbbbb;
+}
+table th {
+    position: sticky;
+    top: 0px;
+    background-color: #bbbbbb;
+}
+table thead {
+    font-weight: bold;
+    
+    font-family: GoogleSans-Regular;
+}
+@font-face {
+    font-family: 'GoogleSans-Regular';
+    src: url('../content/font/GoogleSans-Regular.otf') format('opentype');
+}
+
+.grid {
+    overflow-y: auto;
+    width: 100%;
+    height: calc(100% - 126px);
+}
+

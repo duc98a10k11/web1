@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="../css/components/button.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo-box">
+            <div class="toggle"></div>
+            <div class="logo-page"></div>
+        </div>
+        <div class="navbar-content">
+            <div class="navbar-item">
+                <div class="navbar-item-icon-dashboard"></div>
+                <div class="navbar-item-text">Tổng quan</div>
+            </div>
+            <div class="navbar-item">
+                <div class="navbar-item-icon-report"></div>
+                <div class="navbar-item-text">Báo cáo</div>
+            </div>
+            <div class="navbar-item">
+                <div class="navbar-item-icon-dashboard"></div>
+                <div class="navbar-item-text">Mua hàng</div>
+            </div>
+            <div class="navbar-item">
+                <div class="navbar-item-icon-dic-employee"></div>
+                <div class="navbar-item-text">Danh mục khách hàng</div>
+            </div>
+            <div class="navbar-item">
+                <div class="navbar-item-icon-setting"></div>
+                <div class="navbar-item-text">Thiết lập hệ thống</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="header">
+        <div class="header-item">
+            <select>
+                <option>Nhà hàng Biển Đông&ensp;</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+        </div>
+        <div class="header-right">
+            <div class="header-right-icon icon-avatar"></div>
+            <div class="header-right-text">Lê Minh Đức</div>
+            <button class="header-right-icon icon-3cham"></button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="page-header">
+            <div class="page-title">Danh sách khách hàng</div>
+            <button id="btnAddCustomer" class="btnAddCustomer btn">Thêm khách hàng</button>
+        </div>
+        <div class="page-toolbar">
+            <div>
+                <input class="txtSearch" style="width: 300px;" type="text"
+                   placeholder="Tìm kiếm theo mã khách hàng hoặc họ và tên">
+            </div>
+            <div class="btn-item">
+                <button id="btnDelete" class="btn btnDelete btnVisible">Xóa khách hàng</button>
+                <button id="btRefresh"></button>
+            </div>
+            
+        </div>
+        <div class="popup">
+            <p>Bạn có chắc chắn xóa</p>
+            <div class="popup-item">
+                <button id="btnXacnhanDelete" class="btn">Xác nhận</button>
+                <button id="btnnHuyDelete" class="btnHuy btnDelete btn">Hủy</button>
+            </div>
+            
+        </div>
+        <div class="grid">
+            <table id="tblListCustomer">
+                <thead>
+                    <tr>
+                        <th>Mã khách hàng</th>
+                        <th>Họ và tên</th>
+                        <th>Giới tính</th>
+                        <th>Ngày sinh</th>
+                        <th>Nhóm khách hàng</th>
+                        <th>Điện thoại</th>
+                        <th>Email</th>
+                        <th>Địa chỉ</th>
+                        <th>Số tiền nợ</th>
+                        <th>Đang hoạt động</th>
+                    </tr>
+                </thead>
+                <tbody class="trHover">
+                    <!-- <tr>
+                        <td>21313213</td>
+                        <td>3213211111</td>
+                        <td>Nam</td>
+                        <td>01/03/2021</td>
+                        <td>Nhóm khách hàng MISA</td>
+                        <td>0123456789</td>
+                        <td>nguyenvanduc123@gmail.com</td>
+                        <td>32112</td>
+                        <td></td>
+                        <td>MT1213</td>
+                    </tr>
+                     -->
+                   
+                </tbody>
+            </table>
+        </div>
+        <div class="table-paging">
+            <div class="table-paging-item">
+                <div class="table-paging-item left">Hiển thị 1-10/1000 Khách hàng</div>
+                <div class="table-paging-item center">
+                    <button class="btn-item btn-firstpage"></button>
+                    <button class="btn-item btn-pre-page"></button>
+                    <button class="btn-item">1</button>
+                    <button class="btn-item">2</button>
+                    <button class="btn-item">3</button>
+                    <button class="btn-item">4</button>
+                    <button class="btn-item btn-next-page"></button>
+                    <button class="btn-item btn-lastpage"></button>
+                </div>
+                <div class="table-paging-item right">10 Khách hàng/trang</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="dialog" id="dialog" hidden="hiden">
+        <div class="modal"></div>
+        <div class="dialog-box">
+            <div class="dialog-box-header">
+                <div class="dialog-box-header-text">THÔNG TIN KHÁCH HÀNG</div>
+                <button id="btn-dialog-box-header-exit" class="dialog-box-header-exit"></button>
+            </div>
+            <div class="dialog-box-form">
+                <div class="form-account">
+                    <div class="form-image">
+                        <div class="customer-image"></div>
+                        <button class="btn-add-image">
+                            Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif
+                        </button>
+                    </div>
+                    <div class="form-code-customer">
+                        <div class="form-group">
+                            <label for="">Mã khách hàng (*)</label>
+                            <input type="text" id="txtCustomerCode">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mã thẻ thành viên</label>
+                            <input type="text" id="txtMemberCardCode">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Ngày sinh</label>
+                            <input type="date" class="input-date" id="dateOfBirth">
+                        </div>
+                    </div>
+                    <div class="form-hoten">
+                        <div class="form-group">
+                            <label for="">Họ và tên (*)</label>
+                            <input type="text" id="txtFullName">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nhóm khách hàng</label>
+                            <select class="form-control" name="" id="customerGroup">
+                                <option value="0cb5da7c-59cd-4953-b17e-c9adc9161663">Nhóm khách hàng Misa</option>
+                                <option value="19165ed7-212e-21c4-0428-030d4265475f">Khách VIP</option>
+                                <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">Khách vãng lai</option>
+                                <option value="7a0b757e-41eb-4df6-c6f8-494a84b910f4">Khách thường</option>
+                            </select>
+                        </div>
+                        <div class="form-check">
+                            <div>
+                                <label for="">Giới tính</label>
+                            </div>
+                            <div class="form-radio">
+                                <input type="radio" id="male" name="gender" value="1" checked>
+                                <label for="male">Nam</label><br>
+                                <input type="radio" id="female" name="gender" value="0">
+                                <label for="female">Nữ</label><br>
+                                <input type="radio" id="other" name="gender" value="null">
+                                <label for="other">Khác</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-home">
+                    <div class="form-home-item">
+                        <div class="form-group left">
+                            <label for="">Email</label>
+                            <input type="email" id="txtCustomerEmail" placeholder="example@domain.com">
+                        </div>
+                        <div class="form-group right">
+                            <label for="">Số điện thoại (*)</label>
+                            <input type="number" id="customerPhone">
+                        </div>
+                    </div>
+                    <div class="form-home-item">
+                        <div class="form-group left">
+                            <label for="">Tên công ty</label>
+                            <input type="text" id="txtCompanyNamme">
+                        </div>
+                        <div class="form-group right">
+                            <label for="">Mã số thuế</label>
+                            <input type="text" id="txtCompanyTaxCode" placeholder="Mã số thuế của công ty">
+                        </div>
+                    </div>
+                    <div class="form-home-item">
+                        <div class="form-group">
+                            <label for="">Địa chỉ</label>
+                            <input type="text" id="txtAddress">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-box-footer">
+                <div class="box-footer">
+                    <button class="btn-cancel" id="btnCancel">Hủy</button>
+                    <button class="btn btn-Save" id="btnSave">Lưu</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- js, jquerry -->
+    <!-- <script>
+
+        $("#btnAddCustomer").click(function(){
+            $("#dialog").show();
+        })
+
+    $("#dialog-box-header-exit").click(function(){
+        $("#dialog").hide();
+    })
+        </script>
+        <script src="../js/page/customer.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script src="../js/page/customer.js"></script>
+</body>
+
+</html>

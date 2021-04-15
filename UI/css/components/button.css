@@ -1,0 +1,38 @@
+.btn {
+    background-color: #019160;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 13px;
+    color: #ffffff;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    display: inline-block;
+    outline: none;
+    border: none;
+    /* line-height: 40px; */
+    cursor: pointer;
+}
+
+    .btn:hover {
+        background-color: #2FBE8E;
+    }
+
+    .btn:active {
+        background-color: #01B075;
+    }
+
+@font-face {
+    font-family: 'GoogleSans-Regular';
+    src: url('../../content/font/GoogleSans-Regular.otf') format('opentype');
+}
+/* .icon-add {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../content/icon/add.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 10px;
+    background-position-y: center;
+} */
+

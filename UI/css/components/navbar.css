@@ -1,0 +1,95 @@
+.navbar {
+    width: 226px;
+    height: 100vh;
+    border-right: 1px solid #bbb;
+}
+
+    .navbar .logo-box {
+        width: 100%;
+        height: 48px;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+    }
+
+        .navbar .logo-box .toggle {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            margin-left: 16px;
+            background-image: url('../../content/img/toggle.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position-y: center;
+        }
+
+        .navbar .logo-box .logo-page {
+            height: 24px;
+            width: 100%;
+            margin-left: 10px;
+            background-image: url('../../content/img/cukcuk-logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+    .navbar .navbar-content {
+        width: 100%;
+    }
+
+    .navbar .navbar-item {
+        display: flex;
+        align-items: center;
+        height: 44px;
+        color: #000;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+
+        .navbar .navbar-item:hover {
+            background-color: #019160;
+            color: #ffff;
+        }
+
+        .navbar .navbar-item .navbar-item-icon-dashboard {
+            width: 20px;
+            height: 20px;
+            margin-left: 16px;
+            background-image: url('../../content/icon/dashboard.png');
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-size: contain;
+        }
+
+    .navbar .navbar-item-text {
+        margin-left: 10px;
+    }
+
+    .navbar .navbar-item-icon-report {
+        width: 20px;
+        height: 20px;
+        margin-left: 16px;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-size: contain;
+        background-image: url('../../content/icon/report.png');
+    }
+
+    .navbar .navbar-item-icon-dic-employee {
+        background-image: url('../../content/icon/dic-employee.png');
+        width: 20px;
+        height: 20px;
+        margin-left: 16px;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-size: contain;
+    }
+
+    .navbar .navbar-item-icon-setting {
+        background-image: url('../../content/icon/setting.png');
+        width: 20px;
+        height: 20px;
+        margin-left: 16px;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-size: contain;
+    }

@@ -1,0 +1,15 @@
+.combo-box {
+    border: 1px;
+    border-color: #BBBBBB;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 11px;
+    color: #bbbbbb;
+    font-family: GoogleSans-Regular ;
+    
+}
+
+@font-face {
+    font-family: 'GoogleSans-Regular';
+    src: url('../content/font/GoogleSans-Regular.otf') format('opentype');
+}

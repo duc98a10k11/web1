@@ -1,0 +1,233 @@
+.dialog .modal {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    opacity: .4;
+}
+
+.dialog .dialog-box {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+}
+
+/* .dialog .dialog-box .dialog-box-header {
+    
+} */
+
+.dialog-box-header .dialog-box-header-text {
+    margin: 24px;
+    margin-right: 48px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dialog-box-header .dialog-box-header-exit {
+    background-image: url('../../content/icon/x.svg');
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+    .dialog-box-header .dialog-box-header-exit:hover {
+        background-color: #E9EBEE;
+    }
+/* .box-footer   ****** */
+.dialog-box-footer {
+    background-color: #E9EBEE;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+    .dialog-box-footer .box-footer {
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        padding: 10px 24px 10px;
+    }
+
+    .dialog-box-footer .btn-Save {
+        margin-left: 16px;
+    }
+
+    .dialog-box-footer .btn-cancel {
+        height: 40px;
+        width: 70px;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        background-color: #E9EBEE;
+        cursor: pointer;
+    }
+
+        .dialog-box-footer .btn-cancel:hover {
+            background-color: #BBBBBB;
+        }
+
+    .dialog-box-footer .btn-Save {
+        background-image: url('../../content/icon/save.png');
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        background-position-y: center;
+        background-position-x: 15px;
+        padding-left: 40px;
+    }
+
+/* ************************** */
+/* box-form */
+
+.dialog-box .dialog-box-form {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    top: 72px;
+    bottom: 60px;
+}
+
+.dialog-box-form .form-account {
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dialog-box-form .form-home {
+    height: 210px;
+}
+/* định dạng ảnh đại diện */
+.form-account .form-image {
+    /* background-color: aquamarine; */
+    flex: 1;
+    margin: 10px 5px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+    .form-account .form-image .customer-image {
+        height: 215px;
+        /* margin: 5px; */
+        border-radius: 50%;
+        background-image: url('../../content/img/default-avatar.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 184px 224px;
+    }
+
+    .form-account .form-image .btn-add-image {
+        display: flex;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: white;
+    }
+
+        .form-account .form-image .btn-add-image:hover {
+            background-color: #BBBBBB;
+        }
+/* end anh dai dien */
+/* ********************* */
+/* start định dạng form điền  */
+.form-account .form-code-customer {
+    margin: 10px 0px 10px 0px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* width: 100%; */
+    /* padding: 5px; */
+}
+
+.form-code-customer .form-group .input-date {
+    width: 156px;
+}
+
+/* ****************** */
+/*start định dạng họ tên */
+.form-account .form-hoten {
+    flex: 1;
+    margin: 10px 0px 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-account .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-account .form-control {
+    height: 44px;
+    border-radius: 4px;
+    border: 1px solid #bbbbbb;
+    padding-left: 16px;
+    padding-right: 16px;
+    outline: none;
+}
+
+    .form-account .form-control:hover {
+        border-color: #019160;
+    }
+
+/* .form-account .form-check {
+    display: flex;
+    flex-direction: row;
+} */
+
+.form-check .form-radio {
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    /* padding-left: 23px;
+    padding-right: 5px; */
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.form-home {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+    /* email */
+    .form-home .form-home-item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .form-home .form-home-item .form-group {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .form-home .form-home-item .left {
+            /* display: flex; */
+            margin-right: 5px;
+            flex: 2;
+        }
+
+        .form-home .form-home-item .right {
+            flex: 1;
+        }

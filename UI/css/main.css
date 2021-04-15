@@ -1,0 +1,20 @@
+@import url('components/header.css');
+@import url('components/navbar.css');
+@import url('components/content.css');
+@import url('page/customer.css');
+@import url('components/table.css');
+@import url('components/field-input.css');
+@import url('components/dialog.css');
+
+body {
+    margin: 0px;
+    font-family: GoogleSans-Regular;
+    font-size: 13px;
+    
+}
+
+
+@font-face {
+    font-family: 'GoogleSans-Regular';
+    src: url('../content/font/GoogleSans-Regular.otf') format('opentype');
+}
